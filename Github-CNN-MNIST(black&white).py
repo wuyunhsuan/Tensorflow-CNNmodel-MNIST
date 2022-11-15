@@ -1,5 +1,6 @@
 """
-OpenCV
+CNN MODEL
+MNIST dataset
 """
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -66,6 +67,7 @@ print("First Ans:",np.argmax(predict[0]),"Category:",labels[np.argmax(predict[0]
 print("Second Ans:",np.argmax(predict[1]),"Category:",labels[np.argmax(predict[1])])
 print("Third Ans:",np.argmax(predict[2]),"Category:",labels[np.argmax(predict[2])])
 
+# first pic
 # show how accuracy/loss change throughout process
 import matplotlib.pyplot as plt
 plt.plot(history.history['accuracy'])
@@ -76,6 +78,8 @@ plt.xlabel('epoch')
 plt.legend(['accuracy', 'loss'], loc='upper left')
 plt.show()
 
+# second pic
+# show predictions in a 9*9 picture
 nrow=3
 ncol=3
 fig, axs = plt.subplots(nrows=nrow,ncols=ncol, figsize=(nrow,ncol))

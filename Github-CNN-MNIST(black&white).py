@@ -51,7 +51,7 @@ model.compile(loss=tf.keras.losses.categorical_crossentropy,
               optimizer="adam",metrics=['accuracy'])
 
 # training
-history = model.fit(x_train, y_train2,epochs=10)
+history = model.fit(x_train, y_train2,epochs=100)
 
 # save model
 with open("model_black_white.json", "w") as json_file:
